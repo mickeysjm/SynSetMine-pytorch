@@ -1,0 +1,256 @@
+c0 {'united_states_federal_government||m.01bqks', 'us_federal_government||m.01bqks', 'united_states_government||m.01bqks', 'american_government||m.01bqks', 'us_government||m.01bqks', 'federal_government||m.01bqks', 'u.s._government||m.01bqks', 'united_states||m.01bqks'}
+c1 {'virgin_mary||m.04n7gc6', 'mary||m.04n7gc6', 'blessed_virgin_mary||m.04n7gc6', 'saint_mary||m.04n7gc6', 'our_lady||m.04n7gc6', 'madonna||m.04n7gc6', 'mother_mary||m.04n7gc6'}
+c2 {'non-profit||m.0259tnd', 'nonprofit||m.0259tnd', 'non-profit_organization||m.0259tnd', 'nonprofit_organization||m.0259tnd', 'not-for-profit_corporation||m.0259tnd', 'npo||m.0259tnd', 'not-for-profit||m.0259tnd'}
+c3 {'movie||m.02vxn', 'film||m.02vxn', 'cinema||m.02vxn', 'moving_picture||m.02vxn', 'picture||m.02vxn', 'motion_picture||m.02vxn'}
+c4 {'mountain_pass||m.020wcz', 'notch||m.020wcz', 'pass||m.020wcz', 'gap||m.020wcz', 'saddle||m.020wcz', 'col||m.020wcz'}
+c5 {'usd||m.09nqf', 'us_$||m.09nqf', 'us_dollar||m.09nqf', 'united_states_dollar||m.09nqf', 'us_currency||m.09nqf', 'us$||m.09nqf'}
+c6 {'car_crash||m.08q1tg', 'road_accident||m.08q1tg', 'car_accident||m.08q1tg', 'automobile_accident||m.08q1tg', 'traffic_accident||m.08q1tg', 'auto_accident||m.08q1tg'}
+c7 {'world_wide_wrestling_federation||m.0gy1_', 'wwe||m.0gy1_', 'wwf||m.0gy1_', 'wwwf||m.0gy1_', 'world_wrestling_entertainment||m.0gy1_', 'world_wrestling_federation||m.0gy1_'}
+c8 {'weed||m.054yc0', 'cannabis||m.054yc0', 'ganja||m.054yc0', 'pot||m.054yc0', 'dope||m.054yc0', 'marijuana||m.054yc0'}
+c9 {'solar_radiation||m.06z0n', 'sunshine||m.06z0n', 'natural_light||m.06z0n', 'natural_lighting||m.06z0n', 'light||m.06z0n', 'sunlight||m.06z0n'}
+c10 {'america||m.09c7w0', 'the_states||m.09c7w0', 'usa||m.09c7w0', 'u.s.a.||m.09c7w0', 'u.s.||m.09c7w0', 'united_states||m.09c7w0'}
+c11 {'adolescents||m.0ldpy', 'adolescence||m.0ldpy', 'teenager||m.0ldpy', 'teenagers||m.0ldpy', 'teen||m.0ldpy'}
+c12 {'truman||m.09bg4l', 'president_truman||m.09bg4l', 'harry_s_truman||m.09bg4l', 'president_harry_truman||m.09bg4l', 'harry_truman||m.09bg4l'}
+c13 {'irish_language||m.03x42', 'irish_gaelic||m.03x42', 'irish||m.03x42', 'gaelic||m.03x42', 'gaeilge||m.03x42'}
+c14 {'united_kingdom||m.07ssc', 'u.k.||m.07ssc', 'britain||m.07ssc', 'uk||m.07ssc', 'great_britain||m.07ssc'}
+c15 {'light_years||m.02wpm_', 'light-years||m.02wpm_', 'light_year||m.02wpm_', 'light-year||m.02wpm_', 'ly||m.02wpm_'}
+c16 {'st_pancras_railway_station||m.01t66l', 'st_pancras_station||m.01t66l', 'st_pancras||m.01t66l', 'london_st_pancras||m.01t66l', 'st_pancras_international||m.01t66l'}
+c17 {'micrometres||m.055v9', 'micron||m.055v9', 'micrometre||m.055v9', 'micrometer||m.055v9', 'micrometers||m.055v9'}
+c18 {'franklin_delano_roosevelt||m.02yy8', 'franklin_roosevelt||m.02yy8', 'president_roosevelt||m.02yy8', 'fdr||m.02yy8', 'president_franklin_delano_roosevelt||m.02yy8'}
+c19 {'us_naval_academy||m.0g8fs', 'naval_academy||m.0g8fs', 'united_states_naval_academy||m.0g8fs', 'navy||m.0g8fs', 'usna||m.0g8fs'}
+c20 {'elizabeth_ii||m.0d1_f', 'princess_elizabeth||m.0d1_f', 'the_queen||m.0d1_f', 'queen_elizabeth||m.0d1_f', 'queen_elizabeth_ii||m.0d1_f'}
+c21 {'world_war_ii||m.081pw', 'the_second_world_war||m.081pw', 'ww2||m.081pw', 'wwii||m.081pw', 'world_war_2||m.081pw'}
+c22 {'metric_tonnes||m.07ny7', 'metric_ton||m.07ny7', 'tonnes||m.07ny7', 'metric_tonne||m.07ny7', 'tonne||m.07ny7'}
+c23 {'bleeding||m.012n6x', 'haemorrhage||m.012n6x', 'hemorrhage||m.012n6x', 'blood_loss||m.012n6x', 'hemorrhaging||m.012n6x'}
+c24 {'comic_con||m.03g8rd', 'san_diego_comic-con_international||m.03g8rd', 'comic-con_international||m.03g8rd', 'san_diego_comic-con||m.03g8rd', 'comic-con||m.03g8rd'}
+c25 {'video_game||m.01mw1', 'computer_game||m.01mw1', 'video_gaming||m.01mw1', 'video_games||m.01mw1', 'videogame||m.01mw1'}
+c26 {'pac||m.07pzc', 'tupac||m.07pzc', 'makaveli||m.07pzc', '2pac||m.07pzc', 'tupac_shakur||m.07pzc'}
+c27 {'romanies||m.06j2v', 'gypsy||m.06j2v', 'roma||m.06j2v', 'romani_people||m.06j2v', 'romanis||m.06j2v'}
+c28 {'dostoyevsky||m.032l1', 'fyodor_dostoevsky||m.032l1', 'dostoevsky||m.032l1', 'fyodor_dostoyevsky||m.032l1'}
+c29 {'jail||m.0d1w9', 'penitentiary||m.0d1w9', 'correctional_facility||m.0d1w9', 'prison||m.0d1w9'}
+c30 {'voice_actor||m.0np9r', 'voice_artist||m.0np9r', 'voice_talent||m.0np9r', 'voice_actress||m.0np9r'}
+c31 {'m.s.||m.03bwzr4', 'msc||m.03bwzr4', 's.m.||m.03bwzr4', 'ms||m.03bwzr4'}
+c32 {'alien_life||m.02m2p', 'space_aliens||m.02m2p', 'aliens||m.02m2p', 'extraterrestrial_life||m.02m2p'}
+c33 {'cargo||m.077hhl', 'freighter||m.077hhl', 'cargo_aircraft||m.077hhl', 'transport||m.077hhl'}
+c34 {'premiership||m.02_tc', 'fa_premier_league||m.02_tc', 'english_premier_league||m.02_tc', 'premier_league||m.02_tc'}
+c35 {'cane_sugar||m.0dcfv', 'table_sugar||m.0dcfv', 'sucrose||m.0dcfv', 'sugar||m.0dcfv'}
+c36 {'farsi||m.032f6', 'persian||m.032f6', 'parsi||m.032f6', 'persian_language||m.032f6'}
+c37 {'liters||m.04lmb', 'liter||m.04lmb', 'litres||m.04lmb', 'litre||m.04lmb'}
+c38 {'science-fiction||m.06n90', 'sci-fi||m.06n90', 'science_fiction||m.06n90', 'sf||m.06n90'}
+c39 {'libel||m.0731s', 'calumny||m.0731s', 'slander||m.0731s', 'defamation||m.0731s'}
+c40 {'chairperson||m.09d6p2', 'chair||m.09d6p2', 'chairman||m.09d6p2', 'chairwoman||m.09d6p2'}
+c41 {'southwest_asia||m.023ptn', 'western_asia||m.023ptn', 'southwestern_asia||m.023ptn', 'west_asia||m.023ptn'}
+c42 {'horror_movie||m.03npn', 'horror||m.03npn', 'horror_movies||m.03npn', 'horror_film||m.03npn'}
+c43 {'tai_chi||m.07k4r', 'taijiquan||m.07k4r', 'taiji||m.07k4r', "t'ai_chi||m.07k4r"}
+c44 {'highway_1||m.0j_rr', 'pch||m.0j_rr', 'california_state_route_1||m.0j_rr', 'pacific_coast_highway||m.0j_rr'}
+c45 {'akkadian||m.0dc0d', 'assyrian||m.0dc0d', 'babylonian||m.0dc0d', 'akkadian_language||m.0dc0d'}
+c46 {'capital_punishment||m.01s5q', 'death_penalty||m.01s5q', 'death_sentence||m.01s5q', 'execution||m.01s5q'}
+c47 {'the_emperor||m.03_5s0', 'palpatine||m.03_5s0', 'darth_sidious||m.03_5s0', 'emperor_palpatine||m.03_5s0'}
+c48 {'cocoa||m.02vxqxj', 'cocoa_solids||m.02vxqxj', 'cacao||m.02vxqxj', 'cocoa_powder||m.02vxqxj'}
+c49 {'fracture||m.03fz1q', 'fractures||m.03fz1q', 'broken_bone||m.03fz1q', 'bone_fractures||m.03fz1q'}
+c50 {'flowers||m.0c9ph5', 'blossom||m.0c9ph5', 'flower||m.0c9ph5', 'bloom||m.0c9ph5'}
+c51 {'lds_church||m.0g5llry', 'lds||m.0g5llry', 'mormons||m.0g5llry', 'latter-day_saints||m.0g5llry'}
+c52 {'role-playing_game||m.06c9r', 'role_playing_game||m.06c9r', 'roleplaying_game||m.06c9r', 'rpg||m.06c9r'}
+c53 {'black||m.0x67', 'black_american||m.0x67', 'african_american||m.0x67', 'afro-american||m.0x67'}
+c54 {'film_actress||m.02hrh1q', 'actress||m.02hrh1q', 'film_actor||m.02hrh1q', 'actor||m.02hrh1q'}
+c55 {'scenarist||m.0dxtg', 'script_writer||m.0dxtg', 'screenwriter||m.0dxtg', 'scriptwriter||m.0dxtg'}
+c56 {'j.d.||m.013zdg', 'jd||m.013zdg', 'law_degree||m.013zdg', 'juris_doctor||m.013zdg'}
+c57 {"l'olympia||m.0146ts", 'paris_olympia||m.0146ts', 'olympia||m.0146ts', 'the_olympia||m.0146ts'}
+c58 {'standard_chinese||m.0653m', 'putonghua||m.0653m', 'mandarin_chinese||m.0653m', 'mandarin||m.0653m'}
+c59 {'open_championship||m.017zk1', 'british_open||m.017zk1', 'the_open||m.017zk1', 'the_open_championship||m.017zk1'}
+c60 {'freemasons||m.02_l9', 'freemason||m.02_l9', 'masonic||m.02_l9', 'freemasonry||m.02_l9'}
+c61 {'brain_haemorrhage||m.08g5q7', 'cerebral_hemorrhage||m.08g5q7', 'brain_hemorrhage||m.08g5q7', 'cerebral_haemorrhage||m.08g5q7'}
+c62 {'puma||m.0kff3', 'panther||m.0kff3', 'mountain_lion||m.0kff3', 'cougar||m.0kff3'}
+c63 {'tantric_buddhism||m.0g6mn', 'vajrayana_buddhism||m.0g6mn', 'esoteric_buddhism||m.0g6mn', 'vajrayana||m.0g6mn'}
+c64 {'drummer||m.02hnl', 'drumset||m.02hnl', 'drums||m.02hnl', 'drum_set||m.02hnl'}
+c65 {'tom_riddle||m.0c8lv', 'voldemort||m.0c8lv', 'tom_marvolo_riddle||m.0c8lv', 'lord_voldemort||m.0c8lv'}
+c66 {'christian_bible||m.015j7', 'bible||m.015j7', 'holy_bible||m.015j7', 'the_bible||m.015j7'}
+c67 {'skydive||m.05zmb', 'parachuting||m.05zmb', 'sky_diving||m.05zmb', 'skydiving||m.05zmb'}
+c68 {'unified_atomic_mass_unit||m.0bn2l', 'dalton||m.0bn2l', 'atomic_mass_units||m.0bn2l', 'atomic_mass_unit||m.0bn2l'}
+c69 {'email||m.02nf_', 'electronic_mail||m.02nf_', 'e-mail||m.02nf_', 'mail||m.02nf_'}
+c70 {'electron_volts||m.02m68', 'electronvolts||m.02m68', 'electronvolt||m.02m68', 'ev||m.02m68'}
+c71 {'united_states_army||m.07wh1', 'u.s._army||m.07wh1', 'the_united_states_army||m.07wh1', 'us_army||m.07wh1'}
+c72 {'sex||m.06vp9', 'coitus||m.06vp9', 'copulation||m.06vp9', 'sexual_intercourse||m.06vp9'}
+c73 {'infant||m.0jnvp', 'newborn||m.0jnvp', 'baby||m.0jnvp', 'neonate||m.0jnvp'}
+c74 {'trolley||m.07kfm', 'streetcar||m.07kfm', 'trolley_car||m.07kfm', 'tram||m.07kfm'}
+c75 {'grains||m.01yyk', 'cereal_grain||m.01yyk', 'grain||m.01yyk', 'cereal||m.01yyk'}
+c76 {'brooklyn_nets||m.0jm3b', 'nets||m.0jm3b', 'new_york_nets||m.0jm3b', 'new_jersey_nets||m.0jm3b'}
+c77 {'double_bass||m.02fsn', 'bass||m.02fsn', 'upright_bass||m.02fsn', 'string_bass||m.02fsn'}
+c78 {'metre||m.04sf9', 'metres||m.04sf9', 'meter||m.04sf9', 'meters||m.04sf9'}
+c79 {'norse||m.05p1x', 'old_icelandic||m.05p1x', 'old_norse_language||m.05p1x', 'old_norse||m.05p1x'}
+c80 {'grimm_brothers||m.0bjsc', 'brothers_grimm||m.0bjsc', 'the_brothers_grimm||m.0bjsc'}
+c81 {'french_fries||m.02y6n', 'chips||m.02y6n', 'fries||m.02y6n'}
+c82 {'sitcom||m.0c4xc', 'sitcoms||m.0c4xc', 'situation_comedy||m.0c4xc'}
+c83 {'biking||m.01sgl', 'bicycling||m.01sgl', 'cycling||m.01sgl'}
+c84 {'telecommunication||m.029g_vk', 'telecommunications||m.029g_vk', 'telecom||m.029g_vk'}
+c85 {'scandinavian_airlines_system||m.015msr', 'sas||m.015msr', 'scandinavian_airlines||m.015msr'}
+c86 {'teflon||m.07kw2', 'polytetrafluoroethylene||m.07kw2', 'ptfe||m.07kw2'}
+c87 {'businessman||m.012t_z', 'businesswoman||m.012t_z', 'businessperson||m.012t_z'}
+c88 {'14th_dalai_lama||m.01hw4n', 'tenzin_gyatso||m.01hw4n', 'dalai_lama||m.01hw4n'}
+c89 {'daoism||m.07gvx', 'taoist||m.07gvx', 'taoism||m.07gvx'}
+c90 {'television_producer||m.03gjzk', 'tv_producer||m.03gjzk', 'producer||m.03gjzk'}
+c91 {'chairman_mao||m.04xzm', 'mao_tse-tung||m.04xzm', 'mao_zedong||m.04xzm'}
+c92 {'cats||m.0307l', 'cat_family||m.0307l', 'felidae||m.0307l'}
+c93 {'hrh||m.02_pk_', 'royal_highness||m.02_pk_', 'his_royal_highness||m.02_pk_'}
+c94 {'walt_disney_productions||m.09b3v', 'the_walt_disney_company||m.09b3v', 'disney||m.09b3v'}
+c95 {'motor_neurone_disease||m.017s1k', 'als||m.017s1k', 'amyotrophic_lateral_sclerosis||m.017s1k'}
+c96 {'bergen-belsen||m.0139dh', 'belsen||m.0139dh', 'bergen-belsen_concentration_camp||m.0139dh'}
+c97 {'great_khan||m.02mfs4', 'khagan||m.02mfs4', 'khaganate||m.02mfs4'}
+c98 {'cr||m.025tkr6', 'chrome||m.025tkr6', 'chromium||m.025tkr6'}
+c99 {'n64||m.05h5m', 'ultra_64||m.05h5m', 'nintendo_64||m.05h5m'}
+c100 {'canadian_pacific_railway||m.03p1q8j', 'cpr||m.03p1q8j', 'cp_rail||m.03p1q8j'}
+c101 {'molluscs||m.0fbf8', 'mollusks||m.0fbf8', 'mollusk||m.0fbf8'}
+c102 {'hazmat||m.054l4h', 'dangerous_goods||m.054l4h', 'hazardous_material||m.054l4h'}
+c103 {'obama||m.02mjmr', 'barack_obama||m.02mjmr', 'president_obama||m.02mjmr'}
+c104 {'nippon||m.03_3d', 'japan||m.03_3d', 'nihon||m.03_3d'}
+c105 {'jesus_christ||m.045m1_', 'jesus||m.045m1_', 'christ||m.045m1_'}
+c106 {'boadicea||m.01fz6', 'boudica||m.01fz6', 'boudicca||m.01fz6'}
+c107 {'united_nations_general_assembly||m.07vp7', 'unga||m.07vp7', 'un_general_assembly||m.07vp7'}
+c108 {'cyclic_amp||m.02059', 'cyclic_adenosine_monophosphate||m.02059', 'camp||m.02059'}
+c109 {'sulfur||m.025sf9q', 'sulphur||m.025sf9q', 'brimstone||m.025sf9q'}
+c110 {'washington_d.c.||m.0rh6k', 'washington||m.0rh6k', 'washington_dc||m.0rh6k'}
+c111 {'nazism||m.05hyf', 'nazi||m.05hyf', 'national_socialism||m.05hyf'}
+c112 {'national_cartoonists_society||m.05fhl', 'reuben_award||m.05fhl', 'national_cartoonist_society||m.05fhl'}
+c113 {'gautama_buddha||m.015k7', 'shakyamuni||m.015k7', 'buddha||m.015k7'}
+c114 {'helena||m.0131mn', 'saint_helena||m.0131mn', 'saint_helen||m.0131mn'}
+c115 {'royal_canadian_mounted_police||m.0j05f', 'mounties||m.0j05f', 'rcmp||m.0j05f'}
+c116 {'bbc_1||m.01f2w0', 'bbc1||m.01f2w0', 'bbc_one||m.01f2w0'}
+c117 {'general_motors||m.035nm', 'gm||m.035nm', 'general_motors_corporation||m.035nm'}
+c118 {'halakhah||m.03lw7', 'halacha||m.03lw7', 'halakha||m.03lw7'}
+c119 {'alfred_lord_tennyson||m.0g44z', 'tennyson||m.0g44z', 'alfred_tennyson||m.0g44z'}
+c120 {'sdrs||m.074yp', 'special_drawing_rights||m.074yp', 'sdr||m.074yp'}
+c121 {'gnu_general_public_license||m.037cm', 'gnu_gpl||m.037cm', 'gpl||m.037cm'}
+c122 {'bitrate||m.01nz4c', 'data_transfer_rate||m.01nz4c', 'data_rate||m.01nz4c'}
+c123 {'cal||m.02zd460', 'berkeley||m.02zd460', 'uc_berkeley||m.02zd460'}
+c124 {'petrograd||m.06pr6', 'leningrad||m.06pr6', 'saint_petersburg||m.06pr6'}
+c125 {'twain||m.014635', 'mark_twain||m.014635', 'samuel_clemens||m.014635'}
+c126 {'digital||m.026v5', 'digital_equipment_corporation||m.026v5', 'dec||m.026v5'}
+c127 {'fiefdom||m.012kzc', 'fief||m.012kzc', 'fee||m.012kzc'}
+c128 {'pierre-auguste_renoir||m.06466', 'renoir||m.06466', 'auguste_renoir||m.06466'}
+c129 {'ebola_virus_disease||m.0frm3', 'ebola_virus||m.0frm3', 'ebola||m.0frm3'}
+c130 {'anatolia||m.0k80', 'anatolian_plateau||m.0k80', 'asia_minor||m.0k80'}
+c131 {'bse||m.0jy66', 'bovine_spongiform_encephalopathy||m.0jy66', 'mad_cow_disease||m.0jy66'}
+c132 {'racism||m.06d4h', 'racial_inequality||m.06d4h', 'racial_discrimination||m.06d4h'}
+c133 {'senator_hillary_clinton||m.0d06m5', 'hillary||m.0d06m5', 'hillary_clinton||m.0d06m5'}
+c134 {'lenin||m.05wh0sh', 'vladimir_lenin||m.05wh0sh', 'vladimir_ilyich_lenin||m.05wh0sh'}
+c135 {'navy||m.07wg3', 'united_states_navy||m.07wg3', 'usn||m.07wg3'}
+c136 {'indie_music||m.05rwpb', 'indie||m.05rwpb', 'independent_music||m.05rwpb'}
+c137 {'pope_pius_xii||m.05yhb', 'pius_xii||m.05yhb', 'eugenio_pacelli||m.05yhb'}
+c138 {'alhazen||m.0rvb', 'alhacen||m.0rvb', 'ibn_al-haytham||m.0rvb'}
+c139 {'sport_fishing||m.03qc82_', 'sportfishing||m.03qc82_', 'recreational_fishing||m.03qc82_'}
+c140 {'tuvaluan||m.0q4xw', 'tuvalu||m.0q4xw', 'tuvaluan_language||m.0q4xw'}
+c141 {'god_save_the_queen||m.037kg', 'british_national_anthem||m.037kg', 'national_anthem||m.037kg'}
+c142 {'app||m.02bj4k', 'application_software||m.02bj4k', 'application||m.02bj4k'}
+c143 {'crime||m.0lsxr', 'crime_film||m.0lsxr', 'crime_fiction||m.0lsxr'}
+c144 {'atmospheres||m.02sbhv', 'atm||m.02sbhv', 'atmosphere||m.02sbhv'}
+c145 {'paris_conservatoire||m.02cw8s', 'conservatoire_de_paris||m.02cw8s', 'paris_conservatory||m.02cw8s'}
+c146 {'jacqueline_kennedy||m.0h6mq', 'jacqueline_kennedy_onassis||m.0h6mq', 'jackie_kennedy||m.0h6mq'}
+c147 {'spice_islands||m.0djdm', 'moluccas||m.0djdm', 'maluku_islands||m.0djdm'}
+c148 {'hainan||m.0166br', 'hainan_island||m.0166br', 'hainan_province||m.0166br'}
+c149 {'sierra_on-line||m.0dwcl', 'sierra_entertainment||m.0dwcl', 'sierra||m.0dwcl'}
+c150 {'nitrous||m.09bml', 'nitrous_oxide||m.09bml', 'laughing_gas||m.09bml'}
+c151 {'hercules||m.03lfz', 'herakles||m.03lfz', 'heracles||m.03lfz'}
+c152 {'shrove_tuesday||m.014y0f', 'fat_tuesday||m.014y0f', 'pancake_day||m.014y0f'}
+c153 {'persian_gulf_war||m.018w0j', 'gulf_war||m.018w0j', 'operation_desert_storm||m.018w0j'}
+c154 {'president_clinton||m.0157m', 'president_bill_clinton||m.0157m', 'bill_clinton||m.0157m'}
+c155 {'tutu||m.02d5w', 'archbishop_desmond_tutu||m.02d5w', 'desmond_tutu||m.02d5w'}
+c156 {'tropical_storm||m.07r2x', 'hurricane||m.07r2x', 'tropical_cyclone||m.07r2x'}
+c157 {'rocks||m.01cbzq', 'rock||m.01cbzq', 'stone||m.01cbzq'}
+c158 {'modern_style||m.0g6pl', 'jugendstil||m.0g6pl', 'art_nouveau||m.0g6pl'}
+c159 {'blu-ray||m.02nxhr', 'blu-ray_disc||m.02nxhr', 'bd||m.02nxhr'}
+c160 {'cardiovascular_diseases||m.02k6hp', 'cardiovascular_disease||m.02k6hp', 'heart_disease||m.02k6hp'}
+c161 {'cell_phone||m.050k8', 'mobile_phone||m.050k8', 'cellular_phone||m.050k8'}
+c162 {'penn_station||m.019rqj', 'pennsylvania_station||m.019rqj', 'new_york_penn_station||m.019rqj'}
+c163 {'al-qaida||m.0v74', 'al-qaeda||m.0v74', 'al_qaeda||m.0v74'}
+c164 {'material_science||m.04ytq', 'materials_engineering||m.04ytq', 'materials_science||m.04ytq'}
+c165 {'united_states_geological_survey||m.01b69s', 'us_geological_survey||m.01b69s', 'usgs||m.01b69s'}
+c166 {'emirates||m.0j1z8', 'uae||m.0j1z8', 'united_arab_emirates||m.0j1z8'}
+c167 {'fl_oz||m.01w8dz', 'fluid_ounce||m.01w8dz', 'fluid_ounces||m.01w8dz'}
+c168 {'vision||m.01k1vd', 'visual_perception||m.01k1vd', 'sight||m.01k1vd'}
+c169 {'x-pac||m.0x258', 'syxx||m.0x258', 'syxx-pac||m.0x258'}
+c170 {'ojibwe_language||m.04n7dt5', 'anishinaabe||m.04n7dt5', 'ojibwa||m.04n7dt5'}
+c171 {'chippewa||m.01g0y_', 'ojibwe||m.01g0y_', 'ojibway||m.01g0y_'}
+c172 {'boston_americans||m.01d5z', 'boston_red_sox||m.01d5z', 'red_sox||m.01d5z'}
+c173 {'inauguration_day||m.03bxbl6', 'presidential_inauguration||m.03bxbl6', 'inauguration||m.03bxbl6'}
+c174 {'mathematical_logic||m.04yzn', 'symbolic_logic||m.04yzn', 'formal_logic||m.04yzn'}
+c175 {'ladybird||m.0gj37', 'ladybugs||m.0gj37', 'ladybirds||m.0gj37'}
+c176 {'female_circumcision||m.030zx', 'female_genital_mutilation||m.030zx', 'female_genital_cutting||m.030zx'}
+c177 {'tmj||m.07k8j', 'temporomandibular_joint_dysfunction||m.07k8j', 'tmd||m.07k8j'}
+c178 {'adventist||m.025s83j', 'adventists||m.025s83j', 'adventism||m.025s83j'}
+c179 {'gas_station||m.0gm3m', 'petrol_station||m.0gm3m', 'filling_station||m.0gm3m'}
+c180 {'scandinavian_languages||m.0140kd', 'nordic_languages||m.0140kd', 'north_germanic_languages||m.0140kd'}
+c181 {'nederlands||m.02bv9', 'dutch_language||m.02bv9', 'dutch||m.02bv9'}
+c182 {'rok||m.06qd3', 'korea||m.06qd3', 'south_korea||m.06qd3'}
+c183 {'yhwh||m.087zl', 'tetragrammaton||m.087zl', 'yahweh||m.087zl'}
+c184 {'napoleon||m.0j5b8', 'napoleon_bonaparte||m.0j5b8', 'napoleon_i||m.0j5b8'}
+c185 {'bealltainn||m.01cxk', 'bealtaine||m.01cxk', 'beltane||m.01cxk'}
+c186 {'southwestern_united_states||m.018hq1', 'american_southwest||m.018hq1', 'southwest_united_states||m.018hq1'}
+c187 {'triglycerides||m.0fmjs', 'triglyceride||m.0fmjs', 'triacylglycerol||m.0fmjs'}
+c188 {'feces||m.03241', 'excrement||m.03241', 'faeces||m.03241'}
+c189 {'photographs||m.068jd', 'photo||m.068jd', 'photograph||m.068jd'}
+c190 {'peter_parker||m.06ys2', 'spider-man||m.06ys2', 'spider_man||m.06ys2'}
+c191 {'us_forest_service||m.0bqc_', 'usfs||m.0bqc_', 'united_states_forest_service||m.0bqc_'}
+c192 {'wsj||m.017b3j', 'wall_street_journal||m.017b3j', 'the_wall_street_journal||m.017b3j'}
+c193 {'xmas||m.01vq3', 'christmas||m.01vq3', 'christmas_day||m.01vq3'}
+c194 {'tribal_areas||m.0326z', 'federally_administered_tribal_areas||m.0326z', 'fata||m.0326z'}
+c195 {'ma||m.05k7sb', 'mass.||m.05k7sb', 'massachusetts||m.05k7sb'}
+c196 {'gaddafi||m.0dxvs', 'colonel_gaddafi||m.0dxvs', 'muammar_gaddafi||m.0dxvs'}
+c197 {'birding||m.017dv8', 'birdwatching||m.017dv8', 'bird_watching||m.017dv8'}
+c198 {'thanksgiving_day||m.027qtzz', 'thanksgiving||m.027qtzz', 'thanksgiving_dinner||m.027qtzz'}
+c199 {'stage_design||m.025tx7', 'scenic_design||m.025tx7', 'set_design||m.025tx7'}
+c200 {'mount_everest||m.0blbd', 'qomolangma||m.0blbd', 'everest||m.0blbd'}
+c201 {'african_people||m.026zlyd', 'africans||m.026zlyd', 'african||m.026zlyd'}
+c202 {'james_george_frazer||m.01v00c', 'sir_james_george_frazer||m.01v00c', 'james_frazer||m.01v00c'}
+c203 {'special_forces||m.01vf1h', 'green_berets||m.01vf1h', 'united_states_army_special_forces||m.01vf1h'}
+c204 {'attorney||m.04gc2', 'lawyer||m.04gc2', 'counsel||m.04gc2'}
+c205 {'tempo||m.07m4v', 'allegro||m.07m4v', 'andante||m.07m4v'}
+c206 {"chicago_o'hare_international_airport||m.01ky66", "o'hare_airport||m.01ky66", "o'hare_international_airport||m.01ky66"}
+c207 {'petrol||m.05wy2', 'gasoline||m.05wy2', 'gas||m.05wy2'}
+c208 {'suburb||m.0750y', 'suburbia||m.0750y', 'suburban_area||m.0750y'}
+c209 {'coconut||m.0djtd', 'coconut_palm||m.0djtd', 'cocos_nucifera||m.0djtd'}
+c210 {'oil||m.031cgw', 'oil_paint||m.031cgw', 'oil_paints||m.031cgw'}
+c211 {'us_congress||m.07t31', 'united_states_congress||m.07t31', 'congress||m.07t31'}
+c212 {'martin_luther_king_jr.||m.051cc', 'martin_luther_king||m.051cc', 'mlk||m.051cc'}
+c213 {'kilogramme||m.047dr', 'kilograms||m.047dr', 'kilogram||m.047dr'}
+c214 {'mavericks||m.0jmcv', 'mavs||m.0jmcv', 'dallas_mavericks||m.0jmcv'}
+c215 {'yangzi_river||m.01y4t', 'yangtze_river||m.01y4t', 'yangtze||m.01y4t'}
+c216 {'the_star_spangled_banner||m.07mx2', 'star_spangled_banner||m.07mx2', 'the_star-spangled_banner||m.07mx2'}
+c217 {'bird||m.015p6', 'aves||m.015p6', 'birds||m.015p6'}
+c218 {'director_general||m.05172y', 'director-general||m.05172y', 'general_director||m.05172y'}
+c219 {'bosnia||m.0166b', 'bosnia-herzegovina||m.0166b', 'bih||m.0166b'}
+c220 {'quantum_physics||m.069dx', 'quantum_theory||m.069dx', 'quantum_mechanics||m.069dx'}
+c221 {'jacksons||m.015srx', 'the_jackson_5||m.015srx', 'jackson_5||m.015srx'}
+c222 {'physician||m.05t4q', 'doctor||m.05t4q', 'medical_doctor||m.05t4q'}
+c223 {'king_tut||m.07hcc', 'tutankhamen||m.07hcc', 'tutankhamun||m.07hcc'}
+c224 {'cleveland_cavaliers||m.0jm7n', 'cavs||m.0jm7n', 'cavaliers||m.0jm7n'}
+c225 {'hebrew_language||m.03hkp', 'modern_hebrew||m.03hkp', 'hebrew||m.03hkp'}
+c226 {'letterman||m.0ph24', 'the_late_show||m.0ph24', 'late_show||m.0ph24'}
+c227 {'erythrocytes||m.0hpfr', 'red_blood_cell||m.0hpfr', 'rbcs||m.0hpfr'}
+c228 {'elgar||m.02r38', 'sir_edward_elgar||m.02r38', 'edward_elgar||m.02r38'}
+c229 {'cassava||m.0fm0p', 'yuca||m.0fm0p', 'manioc||m.0fm0p'}
+c230 {'the_stones||m.07mvp', 'rolling_stones||m.07mvp', 'the_rolling_stones||m.07mvp'}
+c231 {'centre_georges_pompidou||m.0f32p', 'centre_pompidou||m.0f32p', 'pompidou_centre||m.0f32p'}
+c232 {'minkowski_spacetime||m.01hjp7', 'minkowski_space||m.01hjp7', 'minkowski_metric||m.01hjp7'}
+c233 {'mac||m.0zd6', 'apple_macintosh||m.0zd6', 'macintosh||m.0zd6'}
+c234 {'castra||m.0326ly', 'roman_fort||m.0326ly', 'castrum||m.0326ly'}
+c235 {'tv_movie||m.015w9s', 'television_film||m.015w9s', 'made-for-tv_movie||m.015w9s'}
+c236 {'king||m.04syw', 'queen||m.04syw', 'monarch||m.04syw'}
+c237 {'eastern_roman_empire||m.017cw', 'byzantium||m.017cw', 'byzantine_empire||m.017cw'}
+c238 {'acrylic_glass||m.017c6v', 'plexiglas||m.017c6v', 'plexiglass||m.017c6v'}
+c239 {'eyeglasses||m.0jyfg', 'spectacles||m.0jyfg', 'glasses||m.0jyfg'}
+c240 {'matza||m.0585y', 'matzo||m.0585y', 'matzah||m.0585y'}
+c241 {'baltics||m.019tjm', 'baltic_countries||m.019tjm', 'baltic_states||m.019tjm'}
+c242 {'chief_executive||m.0dq_5', 'ceo||m.0dq_5', 'chief_executive_officer||m.0dq_5'}
+c243 {'heterosexuality||m.03nh9', 'heterosexual||m.03nh9', 'straight||m.03nh9'}
+c244 {'nj_transit||m.01t0sn', 'new_jersey_transit||m.01t0sn', 'njt||m.01t0sn'}
+c245 {'lunar_new_year||m.012m47', 'chinese_new_year||m.012m47', 'spring_festival||m.012m47'}
+c246 {'postal_code||m.0dll7', 'post_code||m.0dll7', 'postcode||m.0dll7'}
+c247 {'caribbean||m.0261m', 'west_indian||m.0261m', 'west_indies||m.0261m'}
+c248 {'ddr||m.03f2w', 'german_democratic_republic||m.03f2w', 'east_germany||m.03f2w'}
+c249 {'ulama||m.0161df', 'islamic_scholar||m.0161df', 'ulema||m.0161df'}
+c250 {'cm||m.024_6', 'centimetre||m.024_6', 'centimetres||m.024_6'}
+c251 {'amp||m.0jn_', 'amperes||m.0jn_', 'ampere||m.0jn_'}
+c252 {'human||m.0dgw9r', 'homo_sapiens||m.0dgw9r', 'humans||m.0dgw9r'}
+c253 {'wizards||m.0gn9j', 'wizard||m.0gn9j', 'istari||m.0gn9j'}
+c254 {'zen||m.0899b', 'chan||m.0899b', 'zen_buddhism||m.0899b'}
+c255 {'jimmy_carter||m.042kg', 'president_carter||m.042kg', 'president_jimmy_carter||m.042kg'}
