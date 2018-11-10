@@ -1,0 +1,117 @@
+c0 {'president_clinton||m.0157m', 'president_bill_clinton||m.0157m', 'bill_clinton||m.0157m'}
+c1 {'rosh_hashana||m.0dthp', 'jewish_new_year||m.0dthp', 'rosh_hashanah||m.0dthp'}
+c2 {'ceo||m.0dq_5', 'chief_executive_officer||m.0dq_5', 'chief_executive||m.0dq_5'}
+c3 {'tutu||m.02d5w', 'archbishop_desmond_tutu||m.02d5w', 'desmond_tutu||m.02d5w'}
+c4 {'the_queen||m.0d1_f', 'queen_elizabeth_ii||m.0d1_f', 'queen_elizabeth||m.0d1_f'}
+c5 {'president_obama||m.02mjmr', 'obama||m.02mjmr', 'barack_obama||m.02mjmr'}
+c6 {'fracture||m.03fz1q', 'broken_bone||m.03fz1q', 'fractures||m.03fz1q'}
+c7 {'actor||m.02hrh1q', 'actress||m.02hrh1q', 'film_actor||m.02hrh1q'}
+c8 {'jail||m.0d1w9', 'correctional_facility||m.0d1w9', 'prison||m.0d1w9'}
+c9 {'attorney||m.04gc2', 'lawyer||m.04gc2', 'counsel||m.04gc2'}
+c10 {'defamation||m.0731s', 'slander||m.0731s', 'libel||m.0731s'}
+c11 {'ted||m.0194xc', 'edward_kennedy||m.0194xc', 'ted_kennedy||m.0194xc'}
+c12 {'spectacles||m.0jyfg', 'glasses||m.0jyfg', 'eyeglasses||m.0jyfg'}
+c13 {'iranian_revolution||m.01yvs_', 'islamic_revolution||m.01yvs_', '1979_revolution||m.01yvs_'}
+c14 {'gaddafi||m.0dxvs', 'muammar_gaddafi||m.0dxvs', 'qaddafi||m.0dxvs', 'moammar_gadhafi||m.0dxvs', 'gadhafi||m.0dxvs'}
+c15 {'u.k.||m.07ssc', 'britain||m.07ssc', 'uk||m.07ssc', 'united_kingdom||m.07ssc'}
+c16 {'maths||m.04rjg', 'mathematics||m.04rjg', 'math||m.04rjg'}
+c17 {'thanksgiving_dinner||m.027qtzz', 'thanksgiving_day||m.027qtzz', 'thanksgiving||m.027qtzz'}
+c18 {'jackie_kennedy||m.0h6mq', 'jacqueline_kennedy||m.0h6mq', 'jacqueline_kennedy_onassis||m.0h6mq'}
+c19 {'personal_computer||m.0643t', 'personal_computers||m.0643t', 'pc||m.0643t'}
+c20 {'united_arab_emirates||m.0j1z8', 'emirates||m.0j1z8', 'uae||m.0j1z8'}
+c21 {'senator_al_franken||m.01lct6', 'al_franken||m.01lct6', 'franken||m.01lct6'}
+c22 {'e-mail||m.02nf_', 'mail||m.02nf_', 'email||m.02nf_'}
+c23 {'retirement_plan||m.0by51', 'pension||m.0by51', 'retirement||m.0by51'}
+c24 {'nuclear_power||m.05k97', 'nuclear_energy||m.05k97', 'atomic_power||m.05k97'}
+c25 {'producer||m.03gjzk', 'tv_producer||m.03gjzk', 'television_producer||m.03gjzk'}
+c26 {'non-profit_organization||m.0259tnd', 'nonprofit_organization||m.0259tnd', 'nonprofit||m.0259tnd', 'not-for-profit||m.0259tnd', 'non-profit||m.0259tnd'}
+c27 {'nelson_rolihlahla_mandela||m.05g7q', 'mandela||m.05g7q', 'madiba||m.05g7q', 'nelson_mandela||m.05g7q'}
+c28 {'gas||m.05wy2', 'gasoline||m.05wy2', 'petrol||m.05wy2'}
+c29 {'christ||m.045m1_', 'jesus_christ||m.045m1_', 'jesus||m.045m1_'}
+c30 {'wsj||m.017b3j', 'the_wall_street_journal||m.017b3j', 'wall_street_journal||m.017b3j'}
+c31 {'tribune||m.0gk2h', 'the_chicago_tribune||m.0gk2h', 'chicago_tribune||m.0gk2h'}
+c32 {'snoop_lion||m.01vw8mh', 'snoop||m.01vw8mh', 'snoop_dogg||m.01vw8mh'}
+c33 {'tonnes||m.07ny7', 'tonne||m.07ny7', 'metric_ton||m.07ny7'}
+c34 {'death_sentence||m.01s5q', 'capital_punishment||m.01s5q', 'death_penalty||m.01s5q', 'execution||m.01s5q'}
+c35 {'mayor_michael_bloomberg||m.09pfj', 'mike_bloomberg||m.09pfj', 'michael_bloomberg||m.09pfj', 'mayor_bloomberg||m.09pfj'}
+c36 {'the_rolling_stones||m.07mvp', 'rolling_stones||m.07mvp', 'the_stones||m.07mvp'}
+c37 {'infant||m.0jnvp', 'baby||m.0jnvp', 'newborn||m.0jnvp'}
+c38 {'metres||m.04sf9', 'meters||m.04sf9', 'meter||m.04sf9'}
+c39 {'biking||m.01sgl', 'bicycling||m.01sgl', 'cycling||m.01sgl'}
+c40 {'inauguration_day||m.03bxbl6', 'inauguration||m.03bxbl6', 'presidential_inauguration||m.03bxbl6'}
+c41 {'ad||m.011s0', 'advertising||m.011s0', 'advertisement||m.011s0'}
+c42 {'sochi_olympics||m.03mfdg', '2014_olympics||m.03mfdg', '2014_winter_olympics||m.03mfdg'}
+c43 {'photograph||m.068jd', 'photo||m.068jd', 'photographs||m.068jd'}
+c44 {'pirates||m.0ddct', 'piracy||m.0ddct', 'pirate||m.0ddct'}
+c45 {'sundown||m.01b2w5', 'sunset||m.01b2w5', 'sun_set||m.01b2w5'}
+c46 {'new_york_city_police_department||m.01lvn4', 'nypd||m.01lvn4', 'new_york_police_department||m.01lvn4'}
+c47 {'shaikh||m.0189mf', 'sheikh||m.0189mf', 'sheik||m.0189mf'}
+c48 {'operation_desert_storm||m.018w0j', 'gulf_war||m.018w0j', 'persian_gulf_war||m.018w0j'}
+c49 {'con_edison||m.03n0h3', 'consolidated_edison||m.03n0h3', 'con_ed||m.03n0h3'}
+c50 {'grand_central_terminal||m.01rz3c', 'grand_central_station||m.01rz3c', 'grand_central||m.01rz3c'}
+c51 {'racial_discrimination||m.06d4h', 'racism||m.06d4h', 'racial_inequality||m.06d4h'}
+c52 {'english_premier_league||m.02_tc', 'premiership||m.02_tc', 'premier_league||m.02_tc'}
+c53 {'cavs||m.0jm7n', 'cleveland_cavaliers||m.0jm7n', 'cavaliers||m.0jm7n'}
+c54 {'truman||m.09bg4l', 'president_harry_truman||m.09bg4l', 'harry_truman||m.09bg4l'}
+c55 {'french_open||m.012xcl', 'the_french_open||m.012xcl', 'roland_garros||m.012xcl'}
+c56 {'man_city||m.01634x', 'manchester_city||m.01634x', 'city||m.01634x'}
+c57 {'new_york_stock_exchange||m.05drh', 'nyse||m.05drh', 'wall_street||m.05drh'}
+c58 {'fabric||m.0dnr7', 'textile||m.0dnr7', 'cloth||m.0dnr7'}
+c59 {'movie_producer||m.01d_h8', 'producer||m.01d_h8', 'film_producer||m.01d_h8'}
+c60 {'official_corruption||m.0hj49', 'political_corruption||m.0hj49', 'government_corruption||m.0hj49'}
+c61 {'square_mile||m.0m7l2', 'square_miles||m.0m7l2', 'sq_miles||m.0m7l2'}
+c62 {'federal_reserve||m.02xmb', 'fed||m.02xmb', 'the_fed||m.02xmb', 'federal_reserve_system||m.02xmb'}
+c63 {'flowers||m.0c9ph5', 'bloom||m.0c9ph5', 'blossom||m.0c9ph5', 'flower||m.0c9ph5'}
+c64 {'us$||m.09nqf', 'usd||m.09nqf', 'united_states_dollar||m.09nqf', 'american_dollar||m.09nqf'}
+c65 {'tropical_depression||m.07r2x', 'tropical_cyclone||m.07r2x', 'hurricane||m.07r2x', 'tropical_storm||m.07r2x'}
+c66 {'federal_government||m.01bqks', 'united_states_government||m.01bqks', 'american_government||m.01bqks', 'u.s._government||m.01bqks', 'us_government||m.01bqks'}
+c67 {'teenagers||m.0ldpy', 'adolescence||m.0ldpy', 'adolescents||m.0ldpy', 'teen||m.0ldpy', 'teenager||m.0ldpy'}
+c68 {'video_game||m.01mw1', 'video_games||m.01mw1', 'video_gaming||m.01mw1', 'videogame||m.01mw1'}
+c69 {'science_fiction||m.06n90', 'science-fiction||m.06n90', 'sf||m.06n90', 'sci-fi||m.06n90'}
+c70 {'mommy||m.0lbxz', 'mother||m.0lbxz', 'mum||m.0lbxz', 'mom||m.0lbxz'}
+c71 {'film||m.02vxn', 'motion_picture||m.02vxn', 'cinema||m.02vxn', 'movie||m.02vxn', 'picture||m.02vxn'}
+c72 {'dope||m.054yc0', 'ganja||m.054yc0', 'marijuana||m.054yc0', 'cannabis||m.054yc0', 'weed||m.054yc0', 'pot||m.054yc0'}
+c73 {'car_accident||m.08q1tg', 'traffic_accident||m.08q1tg', 'automobile_accident||m.08q1tg', 'auto_accident||m.08q1tg', 'road_accident||m.08q1tg', 'car_crash||m.08q1tg'}
+c74 {'laptop_computer||m.01c648', 'notebook||m.01c648', 'laptop||m.01c648'}
+c75 {'the_mail||m.0180v2', 'the_daily_mail||m.0180v2', 'daily_mail||m.0180v2'}
+c76 {'suburb||m.0750y', 'suburban_area||m.0750y', 'suburbia||m.0750y'}
+c77 {'migraines||m.05904', 'migraine||m.05904', 'migraine_headaches||m.05904'}
+c78 {'rocks||m.01cbzq', 'rock||m.01cbzq', 'stone||m.01cbzq'}
+c79 {'philadelphia_76ers||m.0jm4v', '76ers||m.0jm4v', 'sixers||m.0jm4v'}
+c80 {'terra||m.02j71', 'earth||m.02j71', 'globe||m.02j71', 'planet_earth||m.02j71'}
+c81 {'tv_commercial||m.018ng8', 'television_commercial||m.018ng8', 'television_advertisement||m.018ng8'}
+c82 {'los_angeles_airport||m.04lyk', 'los_angeles_international_airport||m.04lyk', 'lax||m.04lyk'}
+c83 {'private_detective||m.0gt4l', 'private_eye||m.0gt4l', 'private_investigator||m.0gt4l'}
+c84 {'the_times||m.07k2d', 'the_new_york_times||m.07k2d', 'nyt||m.07k2d', 'new_york_times||m.07k2d'}
+c85 {'local_food||m.01hxyd', 'locavore||m.01hxyd', 'local||m.01hxyd'}
+c86 {'liters||m.04lmb', 'litre||m.04lmb', 'liter||m.04lmb', 'litres||m.04lmb'}
+c87 {'time_warner_inc.||m.0l8sx', 'time_warner||m.0l8sx', 'time_warner_inc||m.0l8sx'}
+c88 {'attention_deficit_hyperactivity_disorder||m.0h99n', 'add||m.0h99n', 'adhd||m.0h99n', 'attention_deficit_disorder||m.0h99n'}
+c89 {'cereal||m.01yyk', 'grains||m.01yyk', 'grain||m.01yyk'}
+c90 {'fries||m.02y6n', 'french_fries||m.02y6n', 'chips||m.02y6n'}
+c91 {'specter||m.038_l', 'phantom||m.038_l', 'spectre||m.038_l', 'ghost||m.038_l', 'spook||m.038_l'}
+c92 {'south||m.018hmm', 'southern_united_states||m.018hmm', 'american_south||m.018hmm'}
+c93 {'the_netherlands||m.059j2', 'holland||m.059j2', 'netherlands||m.059j2'}
+c94 {'africans||m.026zlyd', 'african_people||m.026zlyd', 'african||m.026zlyd'}
+c95 {'crossover_utility_vehicle||m.03p66g', 'cuv||m.03p66g', 'crossover||m.03p66g', 'crossover_suv||m.03p66g'}
+c96 {'electronic_dance_music||m.08cyft', 'dance_music||m.08cyft', 'edm||m.08cyft'}
+c97 {'jay-z||m.01vw20h', 'jay_z||m.01vw20h', 'shawn_carter||m.01vw20h'}
+c98 {'west_indies||m.0261m', 'caribbean||m.0261m', 'west_indian||m.0261m'}
+c99 {'telecom||m.029g_vk', 'telecommunication||m.029g_vk', 'telecommunications||m.029g_vk'}
+c100 {'the_met||m.01fqg5', 'metropolitan_opera_house||m.01fqg5', 'metropolitan_opera||m.01fqg5'}
+c101 {'president_jimmy_carter||m.042kg', 'president_carter||m.042kg', 'jimmy_carter||m.042kg'}
+c102 {'pennsylvania_state_university||m.04hgpt', 'penn_state||m.04hgpt', 'penn_state_university||m.04hgpt'}
+c103 {'consul||m.09v97h', 'consulate_general||m.09v97h', 'consul_general||m.09v97h'}
+c104 {'purses||m.080hkjn', 'handbags||m.080hkjn', 'purse||m.080hkjn', 'handbag||m.080hkjn'}
+c105 {'medical_doctor||m.05t4q', 'physician||m.05t4q', 'doctor||m.05t4q'}
+c106 {'mirror||m.01j78g', 'the_daily_mirror||m.01j78g', 'daily_mirror||m.01j78g'}
+c107 {'consumption||m.07jwr', 'tuberculosis||m.07jwr', 'tb||m.07jwr'}
+c108 {'action||m.02kdv5l', 'action_film||m.02kdv5l', 'action_movie||m.02kdv5l'}
+c109 {'royal_dutch_shell_plc||m.0g5vy', 'shell||m.0g5vy', 'royal_dutch_shell||m.0g5vy'}
+c110 {'sexual_intercourse||m.06vp9', 'copulation||m.06vp9', 'sex||m.06vp9'}
+c111 {'mountain_pass||m.020wcz', 'gap||m.020wcz', 'col||m.020wcz', 'pass||m.020wcz', 'notch||m.020wcz'}
+c112 {'foreign_exchange_market||m.02_cz4', 'fx||m.02_cz4', 'forex||m.02_cz4', 'currency_market||m.02_cz4'}
+c113 {'george||m.03f4k', 'gershwin||m.03f4k', 'george_gershwin||m.03f4k'}
+c114 {'goldman_sachs_group_inc.||m.01xdn1', 'goldman_sachs||m.01xdn1', 'goldman||m.01xdn1'}
+c115 {'sean_combs||m.013w7j', 'puffy||m.013w7j', 'diddy||m.013w7j'}
+c116 {'elvis_presley||m.02jq1', 'elvis||m.02jq1', 'the_king||m.02jq1'}
