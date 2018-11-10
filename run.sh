@@ -1,3 +1,20 @@
+#!/bin/bash
+
+# create folder to save model results
+if [ ! -d ./results ]; then
+  mkdir ./results
+fi
+
+# create folder to TensorBoard logging
+if [ ! -d ./runs ]; then
+  mkdir ./runs
+fi
+
+# create folder to save model snapshots
+if [ ! -d ./runs ]; then
+  mkdir ./runs
+fi
+
 python main.py \
 	-mode train \
 	-device-id 0 \
