@@ -32,6 +32,10 @@ By default, we will run on NYT dataset. You can uncomment the code in **run.sh**
 * tqdm (to display information while model running)
 * networkx (to calculate one particular evaluation metric)
 
+## Screenshot
+
+<img src="screenshots/screenshot.gif">
+
 ## References
 
 If you find this code useful for your research, please cite the following paper in your publication:
