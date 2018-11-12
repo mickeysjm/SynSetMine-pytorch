@@ -5,7 +5,6 @@ import os
 import logging
 import torch
 from gensim.models import KeyedVectors  # used to load word2vec
-from gensim.models.poincare import PoincareKeyedVectors  # used to load Poincare Embedding
 import hashlib
 import itertools
 import json
@@ -233,8 +232,6 @@ def myLogger(name='', logpath='./'):
 def load_embedding(fi, embed_name="word2vec"):
     if embed_name == "word2vec":
         embedding = KeyedVectors.load_word2vec_format(fi)
-    elif embed_name == "poincare":
-        embedding = PoincareKeyedVectors.load_word2vec_format(fi)
     else:
         # TODO: allow training embedding from scratch later
         print("[ERROR] Please specify the pre-trained embedding")
