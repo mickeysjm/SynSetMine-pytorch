@@ -1,5 +1,5 @@
 # Mining Entity Synonyms with Efficient Neural Set Generation
-PyTorch Implementation of Mining Entity Synonyms with Efficient Neural Set Generation.
+PyTorch Implementation of [Mining Entity Synonyms with Efficient Neural Set Generation](https://arxiv.org/pdf/1811.07032.pdf).
 
 ## Installation
 
