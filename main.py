@@ -240,7 +240,6 @@ if __name__ == '__main__':
         model_path = options["snapshot"]
         model.load_state_dict(torch.load(model_path))
         vocab = test_set.vocab
-        random.shuffle(vocab)
         clusters = cluster_predict.set_generation(model, vocab, threshold=0.5, eid2ename=test_set.index2word)
         for cluster in clusters:
             print([test_set.index2word[ele] for ele in cluster])

@@ -87,7 +87,7 @@ class ElementSet(object):
         self.vocab = sorted(list(set(self.vocab)))  # sorting for reproducibility
 
     def _initialize_sip_format(self, raw_set_instance_strings):
-        """ Initialize this dataset from a collection of s trings representing <set, instance> pairs.
+        """ Initialize this dataset from a collection of strings representing <set, instance> pairs.
 
         :param raw_set_instance_strings: a list of strings, each string is of format "{'d93', 'd377'} d7824 0"
             which represents a pair of element set and instance

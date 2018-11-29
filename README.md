@@ -14,13 +14,25 @@ Check whether the below dependencies are satisfied. If not, simply install them 
 pip install -r requirements.txt
 ```
 
-Run the model via
+## Training Model
+
+You can train SynSetMine model and test its performance using commands in **run.sh**
 ```
 chmod +x run.sh
 ./run.sh
 ```
 
-By default, we will run on NYT dataset. You can uncomment the code in **run.sh** to run on the other two datasets
+By default, we will run on NYT dataset. You can uncomment the code in **run.sh** to run on the other two datasets. 
+
+Model snapshots will be saved in **./snapshots/** directory. Logs will be saved in **./runs/** directory, and final results will be stored in **./results/** directory. 
+
+## Loading Pre-trained Model for Prediction
+
+We save three pre-trained models, one for each dataset in **./snapshots/** directory. You can load them directly for prediction via:
+```
+chmod +x predict.sh
+./predict.sh
+```
 
 ## Dependencies
 

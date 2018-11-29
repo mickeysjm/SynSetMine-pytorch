@@ -9,7 +9,7 @@ def read_options():
     parser = argparse.ArgumentParser(description='supervised clustering')
 
     # Data parameters
-    parser.add_argument('-dataset', default="nyt", type=str, help='name of the dataset')
+    parser.add_argument('-dataset', default="NYT", type=str, help='name of the dataset')
     parser.add_argument('-data-format', default="set", type=str, choices=['set', 'sip'],
                         help='format of input training dataset [Default: set]')
 
