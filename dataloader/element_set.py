@@ -1,4 +1,8 @@
-"""Data Loader for element sets
+"""
+.. module:: element_set
+    :synopsis: data loader for element set 
+ 
+.. moduleauthor:: Jiaming Shen
 """
 import torch
 import math
@@ -7,25 +11,28 @@ import random
 
 
 class ElementSet(object):
-    def __init__(self, name, data_format, options, raw_data_strings=None):
-        """
+    """ElementSet Dataset.
 
-        :param name: identifier of this dataset
-        :param options: dataset parameters
-        "param data_format: format of this dataset, either "set" or "sip"
-        :param raw_data_strings: a list of strings representing an element set,
-            If data_format is "set", each string is of format "c0 {'d93', 'd377', 'd141', 'd63', 'd166'}"
-            If data_format is "sip", each string is of format "{'d93', 'd377'} d141 0"
-        """
-        self.name = name  # name of this dataset
+    args:
+        name: str, name of this dataset
+        data_format: str, dataset format, either "set" or "sip"
+        options: dict, dataset parameters, including two dicts mapping element to element index
+        raw_data_strings: list, a list of strings representing an element set. 
+
+            - If data_format is "set", each string is of format "c0 {'d93', 'd377', 'd141', 'd63', 'd166'}". 
+            - If data_format is "sip", each string is of format "{'d93', 'd377'} d141 0".
+
+    """
+    def __init__(self, name, data_format, options, raw_data_strings=None):
+        self.name = name  
         self.data_format = data_format
         self.index2word = options["index2word"]
         self.word2index = options["word2index"]
-        self.vocab = []  # this vocab will contain only instances that appear in some of positive_set above
-        self.max_set_size = -1  # the max_set_size in this dataset, just for information, not used in batch generation
-        self.min_set_size = 1e8  # the min_set_size in this dataset, just for information, not used in batch generation
-        self.avg_set_size = -1  # the avg_set_size in this dataset, just for information, not used in batch generation
         self.device = options["device"]
+        self.vocab = []  # this vocab will contain only instances that appear in the above positive_set at least once
+        self.max_set_size = -1  # the max_set_size in this dataset
+        self.min_set_size = 1e8  # the min_set_size in this dataset
+        self.avg_set_size = -1  # the avg_set_size in this dataset
 
         # a list of element sets
         self.positive_sets = []
@@ -223,23 +230,15 @@ class ElementSet(object):
             and len(raw_sets) * neg_sample_size negative sips
 
         Notes:
-            if pos_strategy is "sample_size_repeat_set", for each original set, we sample the size of "set" in sip,
-                repeat this generated set neg_sample_size times, and pair them with each negative instance.
-                This is the strategy to original AAAI submission.
-            if pos_strategy is "sample_size_random_set", for each original set, we sample one size of "set" in sip,
-                and generate one set for each negative instance.
-            if pos_strategy is "fix_size_repeat_set", for each original set, we use pre-determined subset size to
-                generate one "set" in sip, repeat this generated set neg_sample_size times, and pair them with each
-                negative instance. This is the one used in cold-start training.
-            if pos_strategy is "vary_size_enumerate", for each original set and for each subset size less than
-                max_set_size, we enumerate the original set and generate all possible sips. This is the one used for
-                convert test_set in "set" format to "sip" format.
-            if pos_strategy is "vary_size_enumerate_with_full_set", it's basically same as the "vary_size_enumerate"
-                strategy, except that it will also generate full set with only negative instances
-            if pos_strategy is "vary_size_enumerate_with_full_set_plus_group_id", it's basically same as the
-                "vary_size_enumerate_with_full_set" strategy, expect that it will also return the group id of each sip
-                the group id is this sip's corresponding raw set index
-            if pos_strategy is "enumerate", this is the one used for pre-generating sip triplets
+
+            - if pos_strategy is "sample_size_repeat_set", for each original set, we sample the size of "set" in sip, repeat this generated set neg_sample_size times, and pair them with each negative instance. This is the strategy to original AAAI submission.
+            - if pos_strategy is "sample_size_random_set", for each original set, we sample one size of "set" in sip, and generate one set for each negative instance.
+            - if pos_strategy is "fix_size_repeat_set", for each original set, we use pre-determined subset size to generate one "set" in sip, repeat this generated set neg_sample_size times, and pair them with each negative instance. This is the one used in cold-start training.
+            - if pos_strategy is "vary_size_enumerate", for each original set and for each subset size less than max_set_size, we enumerate the original set and generate all possible sips. This is the one used for converting test_set in "set" format to "sip" format.
+            - if pos_strategy is "vary_size_enumerate_with_full_set", it's basically same as the "vary_size_enumerate" strategy, except that it will also generate full set with only negative instances
+            - if pos_strategy is "vary_size_enumerate_with_full_set_plus_group_id", it's basically same as the "vary_size_enumerate_with_full_set" strategy, expect that it will also return the group id of each sip the group id is this sip's corresponding raw set index
+            - if pos_strategy is "enumerate", this is the one used for pre-generating sip triplets
+
         """
         if pos_strategy == "sample_size_repeat_set":
             batch_set = []
