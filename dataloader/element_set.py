@@ -11,19 +11,23 @@ import random
 
 
 class ElementSet(object):
-    """ElementSet Dataset.
+    """ Dataset Object
 
-    args:
-        name: str, name of this dataset
-        data_format: str, dataset format, either "set" or "sip"
-        options: dict, dataset parameters, including two dicts mapping element to element index
-        raw_data_strings: list, a list of strings representing an element set. 
+        :param name: dataset name
+        :type name: str
+        :param data_format: dataset format, either "set" or "sip"
+        :type data_format: str
+        :param options: dataset parameters, including two dicts mapping element to element index
+        :type options: dict
+        :param raw_data_strings: a list of strings representing an element set.
 
-            - If data_format is "set", each string is of format "c0 {'d93', 'd377', 'd141', 'd63', 'd166'}". 
+            - If data_format is "set", each string is of format "c0 {'d93', 'd377', 'd141', 'd63', 'd166'}".
             - If data_format is "sip", each string is of format "{'d93', 'd377'} d141 0".
 
+        :type raw_data_strings: list
     """
     def __init__(self, name, data_format, options, raw_data_strings=None):
+
         self.name = name  
         self.data_format = data_format
         self.index2word = options["index2word"]
@@ -72,11 +76,12 @@ class ElementSet(object):
             return len(self.sip_triplets)
 
     def _initialize_set_format(self, raw_set_strings):
-        """ Initialize this dataset from a collection of strings representing element sets.
+        """Initialize  dataset from a collection of strings representing element sets
 
-        :param raw_set_strings: a list of strings, each string is of format "c0 {'d93', 'd377', 'd141', 'd63', 'd166'}"
-                                which represents an element set
+        :param raw_set_strings: a list of strings representing element sets
+        :type raw_set_strings: list
         :return: None
+        :rtype: None
         """
         set_size_sum = 0  # used to calculate self.avg_set_size
         for line in raw_set_strings:
@@ -94,11 +99,12 @@ class ElementSet(object):
         self.vocab = sorted(list(set(self.vocab)))  # sorting for reproducibility
 
     def _initialize_sip_format(self, raw_set_instance_strings):
-        """ Initialize this dataset from a collection of strings representing <set, instance> pairs.
+        """ Initialize dataset from a collection of strings representing <set, instance> pairs
 
-        :param raw_set_instance_strings: a list of strings, each string is of format "{'d93', 'd377'} d7824 0"
-            which represents a pair of element set and instance
+        :param raw_set_instance_strings: a list of strings representing <set instance> pairs
+        :type raw_set_instance_strings: list
         :return: None
+        :rtype: None
         """
         for line in raw_set_instance_strings:
             line = line.strip()
@@ -120,14 +126,20 @@ class ElementSet(object):
 
     def get_train_batch(self, max_set_size=100, pos_sample_method="sample_size_random_set", neg_sample_size=1,
                         neg_sample_method="complete_random", batch_size=32):
-        """ Generate *one* single training batch from this dataset based on [leave-something-out] principle
+        """ Generate one training batch of <set, instance> pairs
 
-        :param max_set_size:  maximum size of set S
-        :param pos_sample_method:  positive sampling method
-        :param neg_sample_size:  number of negative samples for each set
-        :param neg_sample_method:  negative sampling method
-        :param batch_size:  number of *sets* used in one batch
-        :return:  A collection of batch_size * (neg_sample_size+1) <set, instance> pairs
+        :param max_set_size: maximum size of set S
+        :type max_set_size: int
+        :param pos_sample_method: name of positive sampling method
+        :type pos_sample_method: str
+        :param neg_sample_size: number of negative samples for each set
+        :type neg_sample_size: int
+        :param neg_sample_method: name of negative sampling method
+        :type neg_sample_method: str
+        :param batch_size: number of **sets** in one batch
+        :type batch_size: int
+        :return: a training batch containing "batch_size * (1+neg_sample_size)" <set, instance> pairs
+        :rtype: dict
         """
         if self.data_format == "set":
             raw_sets = []
@@ -186,8 +198,14 @@ class ElementSet(object):
                 yield batch
 
     def get_test_batch(self, max_set_size=5, batch_size=32):
-        """ Generate *all* possible *set-instance prediction* testing batches
+        """ Generate one testing batch of <set, instance> pairs
 
+        :param max_set_size: maximum size of set S
+        :type max_set_size: int
+        :param batch_size: number of **<set, instance> pairs** in one batch
+        :type batch_size: int
+        :return: a testing batch containing "batch_size" <set, instance> pairs
+        :rtype: dict
         """
         batch_set = []
         batch_inst = []
@@ -209,7 +227,12 @@ class ElementSet(object):
             res = self._convert_sip_format_to_tensor(max_set_size, batch_set, batch_inst, labels)
             yield res
 
-    def shuffle(self):
+    def _shuffle(self):
+        """ Shuffle dataset
+
+        :return: None
+        :rtype: None
+        """
         if self.data_format == "set":
             random.shuffle(self.positive_sets)
         elif self.data_format == "sip":
@@ -217,17 +240,22 @@ class ElementSet(object):
 
     def _convert_set_format_to_sip_format(self, raw_sets, pos_strategy, neg_strategy, neg_sample_size=10,
                                           subset_size=5, max_set_size=50):
-        """ Generate <set, instance> pairs from a collection of sets
+        """ Generate <set, instance> pairs (sip) from a collection of sets
 
-        :param raw_sets: a list of original sets
-        :param pos_strategy: strategy for positive sampling
-        :param neg_strategy: strategy for negative sampling
-        :param neg_sample_size: negative sample ratio
-        :param subset_size: size of "set" in generated sips， used only in "fix_size_repeat_set" pos_strategy
-        :param max_set_size: maximum size of "set" in generated sips, used only in "vary_size_enumerate" pos_strategy
-
-        :return: len(raw_sets) * (1 + neg_sample_size) sip-triples, among which len(raw_sets) positive sips
-            and len(raw_sets) * neg_sample_size negative sips
+        :param raw_sets: a list of sets
+        :type raw_sets: list
+        :param pos_strategy: name of positive sampling method
+        :type pos_strategy: str
+        :param neg_strategy: name of negative sampling method
+        :type neg_strategy: str
+        :param neg_sample_size: negative sampling ratio
+        :type neg_sample_size: int
+        :param subset_size: size of "set" in <set, instance> pairs, used only in "fix_size_repeat_set" pos_strategy
+        :type subset_size: int
+        :param max_set_size: maximum size of "set" in <set, instance> pairs, used only in "vary_size_enumerate" pos_strategy
+        :type max_set_size: int
+        :return: len(raw_sets) * (1 + neg_sample_size) sips, among which len(raw_sets) sips are positive and len(raw_sets) * neg_sample_size sips are negative
+        :rtype: list
 
         Notes:
 
@@ -544,6 +572,19 @@ class ElementSet(object):
             return sip_triplets, pos_sip_cnt_sum, neg_sip_cnt_sum
 
     def _convert_sip_format_to_tensor(self, max_set_size, batch_set, batch_inst, labels):
+        """ Generate tensors for <set, instance> pairs
+
+        :param max_set_size: maximum size of "set" in <set, instance> pairs
+        :type max_set_size: int
+        :param batch_set: a list of "sets" in <set, instance> pairs
+        :type batch_set: list
+        :param batch_inst: a list of "instances" in <set, instance> pairs
+        :type batch_inst: list
+        :param labels: a list of labels for each above <set, instance> pair
+        :type labels: list
+        :return: a dict of pytorch tensors representing <set, instance> pairs with their corresponding labels
+        :rtype: dict
+        """
         batch_size = len(batch_set)
         batch_set_tensor = np.zeros([batch_size, max_set_size], dtype=np.int)
         for row_id, row in enumerate(batch_set):
@@ -561,15 +602,22 @@ class ElementSet(object):
         return {'set': batch_set_tensor.to(self.device), 'inst': batch_inst_tensor.to(self.device),
                 'label': label_tensor.to(self.device)}
 
-    def _generate_negative_samples_within_pool(self, batch_set, neg_sample_size, remove_pos=True):
-        """ Generate negative samples within pool
+    def _generate_negative_samples_within_pool(self, positive_sets, neg_sample_size, remove_pos=True):
+        """ Generate negative samples from vocabulary
 
-        pool: set
+        :param positive_sets: a list of positive sets
+        :type positive_sets: list
+        :param neg_sample_size: negative sampling ratio
+        :type neg_sample_size: int
+        :param remove_pos: whether to remove instances in positive sets from the vocabulary
+        :type remove_pos: bool
+        :return: a list of negative sets
+        :rtype: list
         """
         batch_neg = []
-        for subset in batch_set:
+        for positive_set in positive_sets:
             if remove_pos:
-                sample_pool = [ele for ele in self.vocab if ele not in subset]
+                sample_pool = [ele for ele in self.vocab if ele not in positive_set]
             else:
                 sample_pool = self.vocab
 

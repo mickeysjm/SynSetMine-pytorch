@@ -1,15 +1,36 @@
+"""
+.. module:: cluster_predict
+    :synopsis: clustering by set generation algorithm
+
+.. moduleauthor:: Jiaming Shen
+"""
 import torch
 import numpy as np
 from tqdm import tqdm
 
 
 def multiple_set_single_instance_prediction(model, sets, instance, size_optimized=False):
-    """
-    sets: a list of lists
-    instance: a single int
-    """
+    """ Apply the given model to predict the probabilities of adding that one instance into each of the given sets
 
-    if not size_optimized:  # when there exists no single big clusters, no need for complex size optimization
+    :param model: a trained SynSetMine model
+    :type model: SSPM
+    :param sets: a list of sets, each contain the element index
+    :type sets: list
+    :param instance: a single instance, represented by the element index
+    :type instance: int
+    :param size_optimized: whether to optimize the multiple-set-single-instance prediction process. If the size of each
+        set in the given 'sets' varies a lot and there exists a single huge set in the given 'sets', set this parameter
+        to be True
+    :type size_optimized: bool
+    :return:
+
+        - scores of given sets, (batch_size, 1)
+        - scores of given sets union with the instance, (batch_size, 1)
+        - the probability of adding the instance into the corresponding set, (batch_size, 1)
+
+    :rtype: tuple
+    """
+    if not size_optimized:  # when there exists no single big cluster, no need for complex size optimization
         return _multiple_set_single_instance_prediction(model, sets, instance)
     else:
         if len(sets) <= 10:
@@ -64,16 +85,11 @@ def multiple_set_single_instance_prediction(model, sets, instance, size_optimize
 
 
 def _multiple_set_single_instance_prediction(model, sets, instance):
-    """
-    sets: a list of lists
-    instance: a single int
-    """
-
     model.eval()
-    batch_size = len(sets)
-    max_set_size = max([len(ele) for ele in sets])
 
     # generate tensors
+    batch_size = len(sets)
+    max_set_size = max([len(ele) for ele in sets])
     batch_set_tensor = np.zeros([batch_size, max_set_size], dtype=np.int)
     for row_id, row in enumerate(sets):
         batch_set_tensor[row_id][:len(row)] = row
@@ -100,28 +116,29 @@ def _multiple_set_single_instance_prediction(model, sets, instance):
     return setScores, setInstSumScores, positive_prob
 
 
-def set_generation(model, vocab, threshold=None, eid2ename=None, size_opt_clus=False, max_K=None, verbose=False):
+def set_generation(model, vocab, threshold=0.5, eid2ename=None, size_opt_clus=False, max_K=None, verbose=False):
     """ Set Generation Algorithm
 
     :param model: a trained set-instance classifier
-    :param vocab: a list of elements to be clustered
-    :param threshold: control whether a singleton-cluster should be created or not
-    :param eid2ename: a dictionary mapping element id in vocab to human-readable ename
-    :param size_opt_clus: whether to optimize the cluster prediction progress
-    :param max_K: maximum cluster number
+    :type model: SSPM
+    :param vocab: a list of elements to be clustered, each element is represented by its index
+    :type vocab: list
+    :param threshold: the probability threshold for determine whether to create new singleton cluster
+    :type threshold: float
+    :param eid2ename: a dictionary mapping element index to its corresponding (human-readable) name
+    :type eid2ename: dict
+    :param size_opt_clus: a flag indicating whether to optimize the multiple-set-single-instance prediction process
+    :type size_opt_clus: bool
+    :param max_K: maximum number of clusters, If None, we will infer this number automatically
+    :type max_K: int
     :param verbose: whether to print out all intermediate results
-    :return: a list of lists representing the predicted clustering
+    :type verbose: bool
+    :return: a list of detected clusters
+    :rtype: list
     """
-
     model.eval()
 
-    if not threshold:
-        if model.loss_fn == "self_margin_rank":
-            threshold = 0.0
-        else:
-            threshold = 0.5
-
-    clusters = []  # should be a list of lists
+    clusters = []  # will be a list of lists
     candidate_pool = vocab
     if verbose:
         print("{}\t{}".format("vocab", [eid2ename[eid] for eid in vocab]))
@@ -136,8 +153,9 @@ def set_generation(model, vocab, threshold=None, eid2ename=None, size_opt_clus=F
             cluster = [inst]
             clusters.append(cluster)
         else:
-            setScores, setInstSumScores, cluster_probs = multiple_set_single_instance_prediction(model, clusters, inst,
-                                                                                                 size_optimized=size_opt_clus)
+            setScores, setInstSumScores, cluster_probs = multiple_set_single_instance_prediction(
+                model, clusters, inst, size_optimized=size_opt_clus
+            )
             best_matching_existing_cluster_idx = -1
             best_matching_existing_cluster_prob = 0.0
             for cid, cluster_prob in enumerate(cluster_probs):

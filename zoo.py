@@ -3,13 +3,12 @@ import torch.nn as nn
 from math import floor
 
 
-# identity module
 class Identity(nn.Module):
     def __init__(self):
         super(Identity, self).__init__()
 
-    def forward(self, inTensor):
-        return inTensor
+    def forward(self, in_tensor):
+        return in_tensor
 
 
 # module to split at a given point and sum
@@ -102,12 +101,14 @@ def select_model(params):
     """ Select model architecture based on params
 
     :param params: a dictionary contains model architecture name and model sizes
-    :return:
+    :type params: dict
+    :return: a dictionary contains all model components
+    :rtype: dict
     """
     node_embedder = nn.Embedding(params['vocabSize']+1, params['embedSize'])  # in paper, referred as "Embedding Layer"
-    node_postEmbedder = Identity()  # in paper, referred as "Embedding Transformer"
-    node_pooler= torch.sum  # in paper, this is fixed to be "sum", but you can replace it with mean/max/min function
-    scorer = Identity()  # in paper, this is referred as "Post Transformer"
+    node_postEmbedder = Identity()  # in the paper, referred as "Embedding Transformer"
+    node_pooler= torch.sum  # in the paper, this is fixed to be "sum", but you can replace it with mean/max/min function
+    scorer = Identity()  # in the paper, this is referred as "Post Transformer"
 
     # following four modules are not discussed and used in paper
     edge_embedder = Identity()

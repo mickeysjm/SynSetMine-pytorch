@@ -11,17 +11,17 @@ import networkx as nx
 def calculate_precision_recall_f1(tp, fp, fn):
 
     if (tp + fp) == 0:
-        precision = 0
+        precision = 0.0
     else:
         precision = 1.0 * tp / (tp + fp)
 
     if (tp + fn) == 0:
-        recall = 0
+        recall = 0.0
     else:
         recall = 1.0 * tp / (tp + fn)
 
     if (precision + recall) == 0:
-        f1 = 0
+        f1 = 0.0
     else:
         f1 = 2.0 * (precision * recall) / (precision + recall)
 

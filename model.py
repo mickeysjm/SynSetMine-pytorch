@@ -1,3 +1,9 @@
+"""
+.. module:: model
+    :synopsis: core SynSetMine model
+
+.. moduleauthor:: Jiaming Shen
+"""
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -7,12 +13,15 @@ import math
 from sklearn.metrics import confusion_matrix
 
 
-def initialize_weights(moduleList, itype):
+def initialize_weights(moduleList, itype="xavier"):
     """ Initialize a list of modules
 
-    :param moduleList: a list of modules
-    :param itype: initialization type
-    :return:
+    :param moduleList: a list of nn.modules
+    :type moduleList: list
+    :param itype: name of initialization method
+    :type itype: str
+    :return: None
+    :rtype: None
     """
     assert itype == 'xavier', 'Only Xavier initialization supported'
 
@@ -38,10 +47,11 @@ def initialize_weights(moduleList, itype):
 
 
 class SSPM(nn.Module):
-    """ Synonym Set Prediction Model
+    """ Synonym Set Prediction Model (SSPM), namely SynSetMine
 
+    :param params: a dictionary containing all model specifications
+    :type params: dict
     """
-
     def __init__(self, params):
         super(SSPM, self).__init__()
         self.initialize(params)
@@ -64,6 +74,13 @@ class SSPM(nn.Module):
         self.temperature = params["T"]  # use for temperature scaling
 
     def initialize(self, params):
+        """ Initialize model components
+
+        :param params: a dictionary containing all model specifications
+        :type params: dict
+        :return: None
+        :rtype: None
+        """
         modelParts = zoo.select_model(params)
         flags = ['node_embedder', 'node_postEmbedder', 'node_pooler', 'edge_embedder', 'edge_postEmbedder',
                  'edge_pooler', 'combiner', 'scorer']
@@ -79,7 +96,7 @@ class SSPM(nn.Module):
         self.nodeTransform = lambda x: self.node_postEmbedder(self.node_embedder(x))
         self.edgeTransform = lambda x: self.edge_postEmbedder(self.edge_embedder(x))
 
-        # Initialize the parameters with xavier
+        # Initialize the parameters with xavier method
         modules = ['node_embedder', 'node_postEmbedder', 'edge_embedder', 'edge_postEmbedder', 'combiner', 'scorer']
         modules = [getattr(self, mod) for mod in modules if hasattr(self, mod)]
         initialize_weights(modules, 'xavier')
@@ -95,10 +112,11 @@ class SSPM(nn.Module):
     def _set_scorer(self, set_tensor):
         """ Return the quality score of a batch of sets
 
-        :param set_tensor: a tensor of size (batch_size, max_set_size)
-        :return: setScores: a tensor of size (batch_size, 1)
+        :param set_tensor: sets to be scored, size: (batch_size, max_set_size)
+        :type set_tensor: tensor
+        :return: scores of all sets, size: (batch_size, 1)
+        :rtype: tensor
         """
-
         # Element encoding
         mask = (set_tensor != 0).float().unsqueeze_(-1)  # (batch_size, max_set_size, 1)
         setEmbed = self.nodeTransform(set_tensor) * mask
@@ -112,12 +130,12 @@ class SSPM(nn.Module):
         return setScores
 
     def train_step(self, train_batch):
-        """ Train the model on the given train_batch.
+        """ Train the model on the given train_batch
 
-        Here I avoid calling self._set_scorer method twice for efficiency reason.
-
-        :param train_batch: a dictionary containing training batch in sip format
-        :return: None
+        :param train_batch: a dictionary containing training batch in <set, instance> pair format
+        :type train_batch: dict
+        :return: batch_loss, true_positive_num, false_positive_num, false_negative_num, true_positive_num
+        :rtype: tuple
         """
         # obtain set quality scores
         mask = (train_batch['set'] != 0).float().unsqueeze_(-1)
@@ -147,11 +165,18 @@ class SSPM(nn.Module):
     def predict(self, batch_set_tensor, batch_inst_tensor):
         """ Make set instance pair prediction
 
-        :param batch_set_tensor: a tensor of size (batch_size, max_set_size)
-        :param batch_inst_tensor: a tensor of size (batch_size, 1)
-        :return: prediction: a tensor of size (batch_size, 1)
-        """
+        :param batch_set_tensor: packed sets in a collection of <set, instance> pairs, size: (batch_size, max_set_size)
+        :type batch_set_tensor: tensor
+        :param batch_inst_tensor: packed instances in a collection of <set, instance> pairs, size: (batch_size, 1)
+        :type batch_inst_tensor: tensor
+        :return:
 
+            - scores of packed sets, (batch_size, 1)
+            - scores of packed sets union with corresponding instances, (batch_size, 1)
+            - the probability of adding the instance into the corresponding set, (batch_size, 1)
+
+        :rtype: tuple
+        """
         setScores = self._set_scorer(batch_set_tensor)
         setInstSumScores = self._set_scorer(torch.cat([batch_inst_tensor, batch_set_tensor], dim=1))
 

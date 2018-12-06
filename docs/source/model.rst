@@ -1,8 +1,5 @@
-model package
-=============
-
-Submodules
-----------
+data loader
+===========
 
 dataloader\.element_set module
 ------------------------------
@@ -13,4 +10,20 @@ dataloader\.element_set module
 	:private-members:
 	:show-inheritance: 
 
+model
+=====
+
+.. automodule:: model
+	:members:
+	:undoc-members:
+	:private-members:
+	:show-inheritance:
+
+clustering
+==========
+
+.. automodule:: cluster_predict
+	:members:
+	:undoc-members:
+	:show-inheritance:
 

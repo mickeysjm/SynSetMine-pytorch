@@ -28,7 +28,7 @@ def run(options, train_set, dev_set, mode="train", tb_writer=None, my_logger=Non
     results = Metrics()
 
     # Training phase
-    train_set.shuffle()
+    train_set._shuffle()
     train_set_size = len(train_set)
     print("train_set_size: {}".format(train_set_size))
 
@@ -129,7 +129,7 @@ def run(options, train_set, dev_set, mode="train", tb_writer=None, my_logger=Non
                                                                               best_early_stop_metric, last_step))
             break
 
-        train_set.shuffle()
+        train_set._shuffle()
 
     my_logger.info("Final Results:")
     my_logger.info("Loading model: {}/best_steps_{}.pt".format(options["save_dir"], last_step))
