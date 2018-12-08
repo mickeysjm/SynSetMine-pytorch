@@ -1,5 +1,12 @@
 # Mining Entity Synonyms with Efficient Neural Set Generation
-PyTorch Implementation of [Mining Entity Synonyms with Efficient Neural Set Generation](https://arxiv.org/pdf/1811.07032.pdf).
+
+[![Documentation Status](https://readthedocs.org/projects/synsetmine/badge/?version=latest)](https://synsetmine.readthedocs.io/en/latest/?badge=latest)
+
+This repo includes datasets, model training scripts, and model evaluation scripts used in paper -- _[Mining Entity Synonyms with Efficient Neural Set Generation](https://arxiv.org/pdf/1811.07032.pdf)_.
+
+Details about SynSetMine model can be accessed [here](https://arxiv.org/pdf/1811.07032.pdf), and this implementation is based on the PyTorch library.
+
+The documents would be available [here](https://synsetmine.readthedocs.io/en/latest/?badge=latest).
 
 ## Installation
 
@@ -24,7 +31,7 @@ chmod +x run.sh
 
 By default, we will run on NYT dataset. You can uncomment the code in **run.sh** to run on the other two datasets. 
 
-Model snapshots will be saved in **./snapshots/** directory. Logs will be saved in **./runs/** directory, and final results will be stored in **./results/** directory. 
+Model snapshots will be saved in **./snapshots/** directory. Logs will be saved in **./runs/** directory, and final results will be stored in **./results/** directory.
 
 ## Loading Pre-trained Model for Prediction
 
