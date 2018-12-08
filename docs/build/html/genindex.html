@@ -84,7 +84,9 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="model.html#module-model">model</a></li>
-<li class="toctree-l1"><a class="reference internal" href="model.html#module-cluster_predict">clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html#module-cluster_predict">cluster predictor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html#module-evaluator">evaluator</a></li>
+<li class="toctree-l1"><a class="reference internal" href="model.html#module-utils">utils</a></li>
 </ul>
 
             
@@ -152,15 +154,19 @@
 
 <div class="genindex-jumpbox">
  <a href="#_"><strong>_</strong></a>
+ | <a href="#A"><strong>A</strong></a>
  | <a href="#C"><strong>C</strong></a>
  | <a href="#D"><strong>D</strong></a>
  | <a href="#E"><strong>E</strong></a>
  | <a href="#G"><strong>G</strong></a>
  | <a href="#I"><strong>I</strong></a>
+ | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
  
 </div>
 <h2 id="_">_</h2>
@@ -187,9 +193,25 @@
   </ul></td>
 </tr></table>
 
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#utils.Metrics.add">add() (utils.Metrics method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#evaluator.calculate_km_matching_score">calculate_km_matching_score() (in module evaluator)</a>
+</li>
+      <li><a href="model.html#evaluator.calculate_precision_recall_f1">calculate_precision_recall_f1() (in module evaluator)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#utils.check_model_consistency">check_model_consistency() (in module utils)</a>
+</li>
       <li><a href="model.html#module-cluster_predict">cluster_predict (module)</a>, <a href="model.html#module-cluster_predict">[1]</a>
 </li>
   </ul></td>
@@ -208,9 +230,17 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="model.html#module-element_set">element_set (module)</a>
 </li>
+      <li><a href="model.html#dataloader.element_set.ElementSet">ElementSet (class in dataloader.element_set)</a>
+</li>
+      <li><a href="model.html#evaluator.end2end_evaluation_matching">end2end_evaluation_matching() (in module evaluator)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="model.html#dataloader.element_set.ElementSet">ElementSet (class in dataloader.element_set)</a>
+      <li><a href="model.html#evaluator.evaluate_clustering">evaluate_clustering() (in module evaluator)</a>
+</li>
+      <li><a href="model.html#evaluator.evaluate_set_instance_prediction">evaluate_set_instance_prediction() (in module evaluator)</a>
+</li>
+      <li><a href="model.html#module-evaluator">evaluator (module)</a>, <a href="model.html#module-evaluator">[1]</a>
 </li>
   </ul></td>
 </tr></table>
@@ -218,10 +248,12 @@
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="model.html#dataloader.element_set.ElementSet.get_test_batch">get_test_batch() (dataloader.element_set.ElementSet method)</a>
+      <li><a href="model.html#utils.get_num_lines">get_num_lines() (in module utils)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#dataloader.element_set.ElementSet.get_test_batch">get_test_batch() (dataloader.element_set.ElementSet method)</a>
+</li>
       <li><a href="model.html#dataloader.element_set.ElementSet.get_train_batch">get_train_batch() (dataloader.element_set.ElementSet method)</a>
 </li>
   </ul></td>
@@ -239,14 +271,34 @@
   </ul></td>
 </tr></table>
 
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#utils.load_checkpoint">load_checkpoint() (in module utils)</a>
+</li>
+      <li><a href="model.html#utils.load_embedding">load_embedding() (in module utils)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#utils.load_model">load_model() (in module utils)</a>
+</li>
+      <li><a href="model.html#utils.load_raw_data">load_raw_data() (in module utils)</a>
+</li>
+  </ul></td>
+</tr></table>
+
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#utils.Metrics">Metrics (class in utils)</a>
+</li>
       <li><a href="model.html#module-model">model (module)</a>, <a href="model.html#module-model">[1]</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="model.html#cluster_predict.multiple_set_single_instance_prediction">multiple_set_single_instance_prediction() (in module cluster_predict)</a>
+</li>
+      <li><a href="model.html#utils.my_logger">my_logger() (in module utils)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -257,15 +309,33 @@
       <li><a href="model.html#model.SSPM.predict">predict() (model.SSPM method)</a>
 </li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#utils.print_args">print_args() (in module utils)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#utils.Results">Results (class in utils)</a>
+</li>
+  </ul></td>
 </tr></table>
 
 <h2 id="S">S</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="model.html#cluster_predict.set_generation">set_generation() (in module cluster_predict)</a>
+      <li><a href="model.html#utils.save_checkpoint">save_checkpoint() (in module utils)</a>
+</li>
+      <li><a href="model.html#utils.Results.save_metrics">save_metrics() (utils.Results method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#utils.save_model">save_model() (in module utils)</a>
+</li>
+      <li><a href="model.html#cluster_predict.set_generation">set_generation() (in module cluster_predict)</a>
+</li>
       <li><a href="model.html#model.SSPM">SSPM (class in model)</a>
 </li>
   </ul></td>
@@ -274,7 +344,19 @@
 <h2 id="T">T</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#utils.to_gpu">to_gpu() (in module utils)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="model.html#model.SSPM.train_step">train_step() (model.SSPM method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="model.html#module-utils">utils (module)</a>, <a href="model.html#module-utils">[1]</a>
 </li>
   </ul></td>
 </tr></table>

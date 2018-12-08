@@ -19,11 +19,26 @@ model
 	:private-members:
 	:show-inheritance:
 
-clustering
-==========
+cluster predictor
+=================
 
 .. automodule:: cluster_predict
 	:members:
 	:undoc-members:
 	:show-inheritance:
 
+evaluator
+=========
+
+.. automodule:: evaluator
+	:members:
+	:undoc-members:
+	:show-inheritance:
+
+utils
+=====
+
+.. automodule:: utils
+	:members:
+	:undoc-members:
+	:show-inheritance:

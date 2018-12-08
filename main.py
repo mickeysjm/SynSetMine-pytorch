@@ -1,4 +1,4 @@
-from utils import save_model, load_model, myLogger, load_embedding, load_raw_data, Results, Metrics
+from utils import save_model, load_model, my_logger, load_embedding, load_raw_data, Results, Metrics
 from model import SSPM
 from dataloader import element_set
 from tensorboardX import SummaryWriter
@@ -175,7 +175,7 @@ if __name__ == '__main__':
     writer = SummaryWriter(log_dir=None, comment=args.comment)
 
     # Add Python Logger
-    logger = myLogger(name='exp', logpath=writer.file_writer.get_logdir())
+    logger = my_logger(name='exp', log_path=writer.file_writer.get_logdir())
     logger.setLevel(0)
 
     # Save Parameters in TensorBoard Writer and Logger

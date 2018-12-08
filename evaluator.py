@@ -1,3 +1,9 @@
+"""
+.. module:: evaluator
+    :synopsis: model evaluator
+
+.. moduleauthor:: Jiaming Shen, Ruiliang Lyu, Wenda Qiu
+"""
 import torch
 import torch.nn.functional as F
 import numpy as np
@@ -9,6 +15,17 @@ import networkx as nx
 
 
 def calculate_precision_recall_f1(tp, fp, fn):
+    """ Calculate precision, recall, and f1 score
+
+    :param tp: true positive number
+    :type tp: int
+    :param fp: false positive number
+    :type fp: int
+    :param fn: false negative number
+    :type fn: int
+    :return: (precision, recall, f1 score)
+    :rtype: tuple
+    """
 
     if (tp + fp) == 0:
         precision = 0.0
@@ -28,12 +45,112 @@ def calculate_precision_recall_f1(tp, fp, fn):
     return precision, recall, f1
 
 
-def evaluate_set_instance_prediction(model, dataset):
-    """ Evaluate model on dataset based on set-instance prediction task
+def calculate_km_matching_score(weight_nm):
+    """ Calculate maximum weighted matching score
 
-    :param model: a trained SSPM model
-    :param dataset:  an ElementSet dataset
-    :return: a dictionary of metrics with scalar value
+    :param weight_nm: a similarity matrix
+    :type weight_nm: list
+    :return: weighted matching score
+    :rtype: float
+    """
+    x = len(weight_nm)
+    y = len(weight_nm[0])
+    n = max(x, y)
+    NONE = -1e6
+    INF = 1e9
+    weight = [[NONE for j in range(n + 1)] for i in range(n + 1)]
+    for i in range(x):
+        for j in range(y):
+            weight[i + 1][j + 1] = weight_nm[i][j]
+    lx = [0. for i in range(n + 1)]
+    ly = [0. for i in range(n + 1)]
+    match = [-1 for i in range(n + 1)]
+    for i in range(1, n + 1):
+        for j in range(1, n + 1):
+            lx[i] = max(lx[i], weight[i][j])
+    for root in range(1, n + 1):
+        vy = [False for i in range(n + 1)]
+        slack = [INF for i in range(n + 1)]
+        pre = [0 for i in range(n + 1)]
+        py = 0
+        match[0] = root
+        while True:
+            vy[py] = True
+            x = match[py]
+            delta = INF
+            yy = 0
+            for y in range(1, n + 1):
+                if not vy[y]:
+                    if lx[x] + ly[y] - weight[x][y] < slack[y]:
+                        slack[y] = lx[x] + ly[y] - weight[x][y]
+                        pre[y] = py
+                    if slack[y] < delta:
+                        delta = slack[y]
+                        yy = y
+            for y in range(n + 1):
+                if vy[y]:
+                    lx[match[y]] -= delta
+                    ly[y] += delta
+                else:
+                    slack[y] -= delta
+            py = yy
+            if match[py] == -1: break
+        while True:
+            prev = pre[py]
+            match[py] = match[prev]
+            py = prev
+            if py == 0: break
+    score = 0.
+    for i in range(1, n + 1):
+        v = weight[match[i]][i]
+        if v > NONE:
+            score += v
+    return score
+
+
+def end2end_evaluation_matching(groundtruth, result):
+    """ Evaluate the maximum weighted jaccard matching of groundtruth clustering and predicted clustering
+
+    :param groundtruth: a list of element lists representing the ground truth clustering
+    :type groundtruth: list
+    :param result: a list of element lists representing the model predicted clustering
+    :type result: list
+    :return: best matching score
+    :rtype: float
+    """
+    n = len(groundtruth)
+    m = len(result)
+    G = nx.DiGraph()
+    S = n + m
+    T = n + m + 1
+    C = 1e8
+    for i in range(n):
+        for j in range(m):
+            s1 = groundtruth[i]
+            s2 = result[j]
+            s12 = set(s1) & set(s2)
+            weight = len(s12) / (len(s1) + len(s2) - len(s12))
+            weight = int(weight * C)
+            if weight > 0:
+                G.add_edge(i, n + j, capacity=1, weight=-weight)
+    for i in range(n):
+        G.add_edge(S, i, capacity=1, weight=0)
+    for i in range(m):
+        G.add_edge(i + n, T, capacity=1, weight=0)
+    mincostFlow = nx.algorithms.max_flow_min_cost(G, S, T)
+    mincost = nx.cost_of_flow(G, mincostFlow) / C
+    return -mincost / m
+
+
+def evaluate_set_instance_prediction(model, dataset):
+    """ Evaluate model on the given dataset for set-instance pair prediction task
+
+    :param model: a trained set-instance classifier
+    :type model: SSPM
+    :param dataset: an ElementSet dataset with
+    :type dataset: ElementSet
+    :return: a dictionary of set-instance pair prediction metrics
+    :rtype: dict
     """
     model.eval()
 
@@ -44,7 +161,7 @@ def evaluate_set_instance_prediction(model, dataset):
     # the following max_set_size and batch_size number need to be set such that one test batch can fit GPU memory
     # TODO: make this value dynamtically changeable
     max_set_size = 100
-    batch_size = int(model._get_test_sip_batch_size(dataset.sip_triplets))
+    batch_size = int(len(dataset.sip_triplets) / 2)
     for test_batch in dataset.get_test_batch(max_set_size=max_set_size, batch_size=batch_size):
         # log set size for set-size-wise error analysis
         batch_set_size = torch.sum((test_batch['set'] != 0), dim=1)
@@ -103,45 +220,16 @@ def evaluate_set_instance_prediction(model, dataset):
     return metrics
 
 
-def end2end_evaluation_matching(groundtruth, result):
-    """ Evaluate the maximum weighted jaccard matching of groundtruth clustering and predicted clustering
-
-    :param groundtruth: a list of lists representing the ground truth clustering
-    :param result: a list of lists representing the model predicted clustering
-    :return: matching score
-    """
-    n = len(groundtruth)
-    m = len(result)
-    G = nx.DiGraph()
-    S = n + m
-    T = n + m + 1
-    C = 1e8
-    for i in range(n):
-        for j in range(m):
-            s1 = groundtruth[i]
-            s2 = result[j]
-            s12 = set(s1) & set(s2)
-            weight = len(s12) / (len(s1) + len(s2) - len(s12))
-            weight = int(weight * C)
-            if weight > 0:
-                G.add_edge(i, n + j, capacity=1, weight=-weight)
-    for i in range(n):
-        G.add_edge(S, i, capacity=1, weight=0)
-    for i in range(m):
-        G.add_edge(i + n, T, capacity=1, weight=0)
-    mincostFlow = nx.algorithms.max_flow_min_cost(G, S, T)
-    mincost = nx.cost_of_flow(G, mincostFlow) / C
-    return -mincost / m
-
-
 def evaluate_clustering(cls_pred, cls_true):
     """ Evaluate clustering results
 
-    :param cls_pred: a list of lists consisting of elements in a model predicted cluster
-    :param cls_true: a list of lists consisting of elements in a ground truth cluster
-    :return: a dictionary keyed with evaluation metric
+    :param cls_pred: a list of element lists representing model predicted clustering
+    :type cls_pred: list
+    :param cls_true: a list of element lists representing the ground truth clustering
+    :type cls_true: list
+    :return: a dictionary of clustering evaluation metrics
+    :rtype: dict
     """
-
     vocab_pred = set(itertools.chain(*cls_pred))
     vocab_true = set(itertools.chain(*cls_true))
     assert (vocab_pred == vocab_true), "Unmatched vocabulary during clustering evaluation"
