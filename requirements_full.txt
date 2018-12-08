@@ -1,0 +1,7 @@
+numpy
+sklearn
+torch==0.4.1
+gensim==3.4.0
+networkx
+tqdm
+tensorboardX

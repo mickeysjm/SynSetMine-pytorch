@@ -1,7 +1,3 @@
 numpy
-sklearn
-torch==0.4.1
-gensim==3.4.0
-networkx
 tqdm
-tensorboardX
+http://download.pytorch.org/whl/cu80/torch-0.4.1-cp36-cp36m-linux_x86_64.whl

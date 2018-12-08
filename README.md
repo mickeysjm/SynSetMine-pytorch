@@ -11,7 +11,7 @@ cd SynSetMine-pytorch
 
 Check whether the below dependencies are satisfied. If not, simply install them via
 ```
-pip install -r requirements.txt
+pip install -r requirements_full.txt
 ```
 
 ## Training Model
