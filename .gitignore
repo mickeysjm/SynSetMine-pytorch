@@ -9,6 +9,6 @@ __pycache__/
 *$py.class
 
 # PyCharm IDE
-.idea
+.idea/
 .idea/vcs.xml
 .idea/inspectionProfiles
