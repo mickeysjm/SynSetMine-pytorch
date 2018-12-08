@@ -195,3 +195,12 @@ epub_exclude_files = ['search.html']
 
 
 # -- Extension configuration -------------------------------------------------
+autodoc_mock_imports = ['numpy', 'sklearn', 'torch', 'gensim', 'networkx', 'tqdm', 'tensorboardX']
+
+# intersphinx_mapping = {
+#     'git': ('https://gitpython.readthedocs.io/en/stable/', None),
+#     'tensorboardX': ('https://tensorboardx.readthedocs.io/en/latest/', None),
+#     'python':('https://docs.python.org/3', None),
+#     'numpy': ('http://docs.scipy.org/doc/numpy/', None),
+#     'torch': ('http://pytorch.org/docs/master', None)
+# }
