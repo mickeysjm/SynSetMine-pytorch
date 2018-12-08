@@ -1,2 +1,14 @@
-# PyCharm Files
-.idea/
+# Sphinx documentation
+docs/build/
+
+.DS_Store
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyCharm IDE
+.idea
+.idea/vcs.xml
+.idea/inspectionProfiles
